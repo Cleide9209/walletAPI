@@ -1,0 +1,40 @@
+package com.wallet.dto;
+
+import java.math.BigDecimal;
+
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
+
+import lombok.Data;
+
+@Data
+public class WalletDTO {
+	private Long id;
+	@Length(min = 3, message = "O nome deve conter no mpinimo 3 caracteres")
+	@NotNull(message = "O nome não deve ser nulo")
+	private String name;
+	@NotNull(message = "Informe um valor para a carteira")
+	private BigDecimal value;
+/*	
+	public Long getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public BigDecimal getValue() {
+		return value;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}
+*/
+}

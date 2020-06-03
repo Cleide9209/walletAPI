@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="WalletItemRepositoryTest" project="wallet" tests="7" started="7" failures="0" errors="1" ignored="0">
+  <testsuite name="com.wallet.repository.WalletItemRepositoryTest" time="0.851">
+    <testcase name="testFindByTypeSd" classname="com.wallet.repository.WalletItemRepositoryTest" time="0.62"/>
+    <testcase name="testFindBetweenDates" classname="com.wallet.repository.WalletItemRepositoryTest" time="0.053"/>
+    <testcase name="testSaveInvalidWalletItem" classname="com.wallet.repository.WalletItemRepositoryTest" time="0.106">
+      <error>java.lang.Exception: Unexpected exception, expected&lt;javax.validation.ConstraintViolationException&gt; but was&lt;org.springframework.transaction.TransactionSystemException&gt;&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:30)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)&#13;
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)&#13;
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+Caused by: org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction&#13;
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:543)&#13;
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)&#13;
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:631)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)&#13;
+	at com.sun.proxy.$Proxy119.save(Unknown Source)&#13;
+	at com.wallet.repository.WalletItemRepositoryTest.testSaveInvalidWalletItem(WalletItemRepositoryTest.java:132)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)&#13;
+	... 24 more&#13;
+Caused by: javax.persistence.RollbackException: Error while committing the transaction&#13;
+	at org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:81)&#13;
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:104)&#13;
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)&#13;
+	... 50 more&#13;
+Caused by: javax.validation.ConstraintViolationException: Validation failed for classes [com.wallet.entity.WalletItem] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='não pode ser nulo', propertyPath=value, rootBeanClass=class com.wallet.entity.WalletItem, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='não pode ser nulo', propertyPath=type, rootBeanClass=class com.wallet.entity.WalletItem, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]&#13;
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)&#13;
+	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreUpdate(BeanValidationEventListener.java:88)&#13;
+	at org.hibernate.action.internal.EntityUpdateAction.preUpdate(EntityUpdateAction.java:304)&#13;
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:174)&#13;
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)&#13;
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)&#13;
+	at java.util.LinkedHashMap.forEach(Unknown Source)&#13;
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)&#13;
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)&#13;
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)&#13;
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)&#13;
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1352)&#13;
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:443)&#13;
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3202)&#13;
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2370)&#13;
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)&#13;
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)&#13;
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)&#13;
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)&#13;
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)&#13;
+	... 51 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testSave" classname="com.wallet.repository.WalletItemRepositoryTest" time="0.02"/>
+    <testcase name="testFindByType" classname="com.wallet.repository.WalletItemRepositoryTest" time="0.013"/>
+    <testcase name="deleteWalletItem" classname="com.wallet.repository.WalletItemRepositoryTest" time="0.019"/>
+    <testcase name="testUpdate" classname="com.wallet.repository.WalletItemRepositoryTest" time="0.02"/>
+  </testsuite>
+</testrun>
